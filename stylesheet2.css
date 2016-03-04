@@ -1,0 +1,49 @@
+body{
+	border:1px solid blue;
+	font-family: Verdana;
+	margin:0px;
+	padding:0px
+	
+	
+
+}
+
+#header{
+	
+	border-radius:0px;
+	height:30px;
+	width:400px;
+	margin:auto;
+	margin-bottom:20px;
+
+
+}
+
+#navbar{
+	
+	border-radius:0px;
+	margin-bottom:10px;
+	height:30px;
+	text-align:center;
+	
+
+
+
+}
+
+.left{
+	float:left;
+	
+
+
+}
+
+.right{
+	float:right;
+
+}
+
+#footer{
+	clear:both;
+	text-align:center;
+}
