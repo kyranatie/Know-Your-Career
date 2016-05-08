@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+
+    <script type="text/javascript">
+
+    function ValidateForm()
+{
+    var firstname = document.signup.firstname;
+    var lastname = document.signup.lastname;
+    var username = document.signup.username;
+    var email = document.signup.email;
+    var phone = document.signup.phone;
+    var password = document.signup.password;
+    var profession = document.signup.profession;
+    var experience = document.signup.experience;
+
+    if (firstname.value == "")
+    {
+        window.alert("Please enter your first name.");
+        firstname.focus();
+        return false;
+    }
+    
+     if (lastname.value == "")
+    {
+        window.alert("Please enter your last name.");
+        lastname.focus();
+        return false;
+    }
+     if (username.value == "")
+    {
+        window.alert("Please enter your user name.");
+        username.focus();
+        return false;
+    }
+    if (email.value == "")
+    {
+        window.alert("Please enter a valid e-mail address.");
+        email.focus();
+        return false;
+    }
+    if (email.value.indexOf("@", 0) < 0)
+    {
+        window.alert("Please enter a valid e-mail address.");
+        email.focus();
+        return false;
+    }
+    if (email.value.indexOf(".", 0) < 0)
+    {
+        window.alert("Please enter a valid e-mail address.");
+        email.focus();
+        return false;
+    }
+
+    if ((phone.value == ""))
+    {
+        window.alert("Please enter your telephone number.");
+        phone.focus();
+        return false;
+    }
+
+    if (profession.selectedIndex < 0)
+    {
+        alert("Please select a profession.");
+        what.focus();
+        return false;
+    }
+
+    if (experience.selectedIndex < 0)
+    {
+        alert("Please select your years of experience.");
+        experience.focus();
+        return false;
+    }
+
+ if (gender == null)
+    {
+        alert("Please select your gender.");
+        gender.focus();
+        return false;
+    }
+    if (password.value == "")
+    {
+        window.alert("Please provide your password.");
+        comment.focus();
+        return false;
+    }
+    return true;
+}
+
+
+</script>
+
+</head>
+
+<body>
+
+    <div id="page-container">
+	<div id="main-nav">
+	  
+		<a href="index.html">Home</a>||
+		<a href="#">Career Options</a>||
+		<a href="#">Mentor</a>||
+		<a href="#">Contact Us</a>
+	   
+
+
+        </div>
+        <div id="header">
+            <h1>Know Your Career</h1>
+            <img src="headerpic.jpg"/>
+
+        </div>
+
+        <div id= "sign">
+
+            <h2>Sign Up</h2>
+
+	    <form name="signup" method="post" action="signup.php" onsubmit="">
+
+                First Name <input type="text" name = "firstname"  /><br>
+                <br>
+ 	        Last Name <input type="text" name = "lastname" /><br>
+   		 <br>
+		User Name <input type="text" name = "username" /><br>
+		 <br>
+		Password <input type="text" name = "password"/><br>
+		 <br>
+
+    Email <input type="text" name = "email"/><br>
+                <br>
+		Gender <input type="radio" name="gender" value = "male"> Male<br>
+                     &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="gender" value = "female"> Female<br>
+ 		 <br>
+                Proffesion
+			<select name="profession" id = "profession">	
+  				<option type = "checkbox" value="doctor">Doctor</option>
+  				<option type = "checkbox" value="engineer">Engineer</option>
+          <option  type = "checkbox" value="computer">Computer Scientist</option>
+ 				  <option type = "checkbox" value="lawyer">Lawyer</option>
+			  </select>
+        <br>
+		 <br>
+
+                Phone <input type="text" name="phone"/><br>
+                <br>
+
+                Years of experience
+			<select name="experience" id = "experience">
+  				<option type = "checkbox" value="1">1</option>
+  				<option type = "checkbox" value="3">3</option>
+  				<option type = "checkbox" value="5">5</option>
+ 				
+			  </select>
+        <br>
+		 <br>
+
+		<button name="submit" value="submit" onclick="return ValidateForm();">Submit</button> 
+
+            </form>
+
+
+        </div>
+        </div>
+        <div id="footer">
+            <div id="altnav">
+		<a href="index.html">Home</a> - 
+		<a href="#">Career Options</a> - 
+		<a href="#">Mentor</a> - 
+		<a href="#">Contact Us</a> 
+		
+	    </div>
+
+	    Copyright &copy Shakira Ndagire Designs
+
+            Powered by <a href="#">Shakira Ndagire</a>
+
+        </div>
+
+    </div>
+
+</body>
+
+
+</html>
+
+

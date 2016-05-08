@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+
+<script type="text/javascript">
+
+function ValidateForm()
+{
+   
+    var username = document.signup.username;
+    var password = document.signup.password;
+    
+   
+     if (username.value == "")
+    {
+        window.alert("Please enter your username.");
+        username.focus();
+        return false;
+    }
+    
+    if (password.value == "")
+    {
+        window.alert("Please enter your password.");
+        password.focus();
+        return false;
+    }
+    return true;
+}
+
+
+</script>
+
+</head>
+
+<body>
+
+    <div id="page-container">
+	<div id="main-nav">
+	  
+		<a href="index.html">Home</a> -
+		<a href="#">Career Options</a> -
+		<a href="#">Mentor</a> -
+		<a href="#">Contact Us</a>
+	  
+
+
+        </div>
+        <div id="header">
+            <h1>Know Your Career</h1>
+            <img src="headerpic.jpg"/>
+
+        </div>
+        <div id="sidebar-a">
+	   
+           <p>Do you already have an account with us</p> 
+           <h2>Login</h2>
+           <form name = "login" action ="login.php" method="post" onsubmit="return ValidateForm(this);">
+	         Username <input type=text name = "username"/><br><br>
+             Password <input type=text name = "password"/><br><br>
+            <button name="submit" value="submit" onclick="return ValidateForm();">Submit</button> 
+
+           </form>
+
+	   <p>If you donot have an account<a href="signup.html"> Signup </a></p>
+           
+
+
+        </div>
+        <div id="content">
+	    <h2>Home</h2>
+            <p><strong>Know your career</strong> is an web based platform that enables high school students to get recommended 
+            Career options basing on their interests and passions.</p>
+
+        </div>
+        <div id="footer">
+            <div id="altnav">
+		<a href="index.html">Home</a> - 
+		<a href="#">Career Options</a> - 
+		<a href="#">Mentor</a> - 
+		<a href="#">Contact Us</a> 
+		
+	    </div>
+
+	    Copyright &copy Shakira Ndagire Designs
+
+            Powered by <a href="#">Shakira Ndagire</a>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+
+</html>
