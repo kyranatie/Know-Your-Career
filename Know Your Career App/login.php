@@ -1,5 +1,8 @@
 <?php     
 include('connect.php');
+if(!isset($_SESSION)){
+  session_start();
+}
 
 if(isset($_POST['submit']))
  {
@@ -8,16 +11,20 @@ if(isset($_POST['submit']))
   
   $q=mysql_query("select * from signup where username='".$username."' and password='".$password."' ") or die(mysql_error());
 
-  $n=mysql_fetch_row($q);
+  $n=mysql_fetch_array($q);
   
   if($n>0)
   {
-    header('Location: career.html');
+
+     $_SESSION['username'] = $username;
+     echo '<meta http-equiv="refresh" content="0;url=career_form.php">';
+
   }
      
   else{
 
-    header('Location: signup.html');
+          echo '<meta http-equiv="refresh" content="1;url=signup.html">';
+
   }
 }
 ?>

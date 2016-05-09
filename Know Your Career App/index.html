@@ -56,8 +56,8 @@ function ValidateForm()
            <p>Do you already have an account with us</p> 
            <h2>Login</h2>
            <form name = "login" action ="login.php" method="post" onsubmit="return ValidateForm(this);">
-	         Username <input type=text name = "username"/><br><br>
-             Password <input type=text name = "password"/><br><br>
+	         Username <input type=text name = "username" required /><br><br>
+             Password <input type=password name = "password" required /><br><br>
             <button name="submit" value="submit" onclick="return ValidateForm();">Submit</button> 
 
            </form>

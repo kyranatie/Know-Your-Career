@@ -29,7 +29,7 @@ if(isset($_POST['submit']))
    {
     // echo 'Values are registered successfully';
 
-    header('Location: career.html');
+    header('Location: career.php');
    }
    else
    {

@@ -1,17 +1,37 @@
-<?php     
-include('connect.php');
-if(@$_POST['submit']){
-$sql="insert into careeroption(option1,option2,option3,option4,option5,option6) 
-values('".$_POST['option1']."', '".$_POST['option2']."','".$_POST['option3']."','".$_POST['option4']."','".$_POST['option5']."',
-'".$_POST['option6']."')";
+<?php
 
-$res=mysql_query($sql);
-if($res){
-	echo "Record successfully inserted";
-	}else{
-        echo "There is some problem in inserting record";
-	      }
-
+if(!isset($_SESSION)){
+  session_start();
 }
 
-?>
+
+include('connect.php');
+
+if(isset($_POST['submit']))  
+{   
+
+$checkbox1=$_POST['coption'];
+
+$chk = ""; 
+foreach($checkbox1 as $chk1)  
+   {  
+      $chk .= $chk1.",";  
+       $sql = mysql_query("insert into careeroption(career_option,username) values ('$chk1','".$_SESSION['username']."')") or die("error here".mysql_error());
+
+   }    
+
+ if($sql){
+
+      echo'<script>alert("Inserted Successfully")</script>';  
+
+      echo '<meta http-equiv="refresh" content="1;url=career_form.php">';
+ }else{
+      echo'<script>alert("Failed To Insert")</script>';  
+	 }
+
+
+}  
+
+
+
+?>  
